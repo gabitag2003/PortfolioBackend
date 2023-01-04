@@ -15,15 +15,19 @@ public class Proyectos {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreP;
+    private String anioP;
     private String descripcionP;
 
     public Proyectos() {
     }
 
-    public Proyectos(String nombreP, String descripcionP) {
+    public Proyectos(String nombreP, String anioP, String descripcionP) {
         this.nombreP = nombreP;
+        this.anioP = anioP;
         this.descripcionP = descripcionP;
     }
+
+    
     
     
     

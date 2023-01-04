@@ -14,14 +14,18 @@ public class DtoProyectos {
     private String nombreP;
     @NotBlank
     private String descripcionP;
+    private String anioP;
 
     public DtoProyectos() {
     }
 
-    public DtoProyectos(String nombreP, String descripcionP) {
+    public DtoProyectos(String nombreP, String descripcionP, String anioP) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
+        this.anioP = anioP;
     }
+
+   
 
  
     

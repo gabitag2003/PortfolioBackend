@@ -17,15 +17,19 @@ public class Educacion {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreE;
+    private String anioE;
     private String descripcionE;
 
     public Educacion() {
     }
 
-    public Educacion(String nombreE, String descripcionE) {
+    public Educacion(String nombreE, String anioE, String descripcionE) {
         this.nombreE = nombreE;
+        this.anioE = anioE;
         this.descripcionE = descripcionE;
     }
+
+   
     
     
     

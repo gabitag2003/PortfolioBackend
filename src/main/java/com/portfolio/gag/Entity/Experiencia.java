@@ -23,17 +23,20 @@ public class Experiencia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String puestoE;
+    private String anioE;
     private String descripcionE;
-
 
     public Experiencia() {
     }
 
-    public Experiencia(String puestoE, String descripcionE) {
+    public Experiencia(String puestoE, String anioE, String descripcionE) {
         this.puestoE = puestoE;
+        this.anioE = anioE;
         this.descripcionE = descripcionE;
     }
-     
+
+
+    
     
     
     }

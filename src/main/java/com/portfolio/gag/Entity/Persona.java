@@ -9,8 +9,7 @@ import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-
-@Getter  @Setter
+@Getter @Setter
 @Entity
 public class Persona {
     @Id
@@ -26,8 +25,8 @@ public class Persona {
     private String apellido;
      
    @NotNull
-   private String   descripcion;
-     
+    private String   descripcion;
+   
 
    private String img;
 
@@ -39,9 +38,10 @@ public class Persona {
         this.apellido = apellido;
         this.descripcion = descripcion;
         this.img = img;
+       
     }
-   
-   
-   
-   
 }
+    
+
+   
+    

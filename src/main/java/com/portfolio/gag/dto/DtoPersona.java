@@ -5,7 +5,7 @@ import javax.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter   @Setter
+@Getter @Setter
 public class DtoPersona {
 
     
@@ -15,6 +15,7 @@ public class DtoPersona {
     private String apellido;
 @NotBlank
     private String  descripcion;
+ 
 @NotBlank       
     private String img;
 
@@ -28,6 +29,8 @@ public class DtoPersona {
         this.img = img;
     }
 
+    
+  
 
 
 

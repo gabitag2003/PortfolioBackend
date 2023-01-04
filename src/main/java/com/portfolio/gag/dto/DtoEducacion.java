@@ -2,8 +2,10 @@
 package com.portfolio.gag.dto;
 
 import javax.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
-
+@Getter @Setter
 public class DtoEducacion {
     
 
@@ -11,34 +13,15 @@ public class DtoEducacion {
     private String nombreE;
     @NotBlank
     private String descripcionE;
+    private String anioE;
 
     public DtoEducacion() {
     }
 
-    public DtoEducacion(String nombreE, String descripcionE) {
+    public DtoEducacion(String nombreE, String descripcionE, String anioE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.anioE = anioE;
     }
-
-    public String getNombreE() {
-        return nombreE;
-    }
-
-    public void setNombreE(String nombreE) {
-        this.nombreE = nombreE;
-    }
-
-    public String getDescripcionE() {
-        return descripcionE;
-    }
-
-    public void setDescripcionE(String descripcionE) {
-        this.descripcionE = descripcionE;
-    }
-    
-    
 }
-    
-    
-    
-    
+

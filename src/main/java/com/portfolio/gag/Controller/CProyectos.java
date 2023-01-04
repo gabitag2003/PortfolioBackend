@@ -65,7 +65,7 @@ public class CProyectos {
         }
         
         Proyectos proyectos = new Proyectos(
-                dtoproyectos.getNombreP(), dtoproyectos.getDescripcionP()         
+                dtoproyectos.getNombreP(),dtoproyectos.getAnioP(), dtoproyectos.getDescripcionP()         
         );
         sProyectos.save(proyectos);  
         return new ResponseEntity(new Mensaje("Proyecto generado"), HttpStatus.OK);
@@ -87,6 +87,7 @@ public class CProyectos {
         Proyectos proyectos = sProyectos.getOne(id).get();
         
         proyectos.setNombreP(dtoproyectos.getNombreP());
+        proyectos.setAnioP(dtoproyectos.getAnioP());
         proyectos.setDescripcionP(dtoproyectos.getDescripcionP());
         
         sProyectos.save(proyectos);
