@@ -16,7 +16,7 @@ public class DtoPersona {
 @NotBlank
     private String  descripcion;
  
-@NotBlank       
+    
     private String img;
 
     public DtoPersona() {
@@ -28,6 +28,7 @@ public class DtoPersona {
         this.descripcion = descripcion;
         this.img = img;
     }
+
 
     
   

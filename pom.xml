@@ -20,6 +20,9 @@
     <properties>
         <java.version>17</java.version>
     </properties>
+    
+    
+    
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -43,7 +46,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+                        <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -71,7 +74,7 @@
         </dependency>
         
         
-        <dependency>
+              <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
             <version>2.2.3</version>
