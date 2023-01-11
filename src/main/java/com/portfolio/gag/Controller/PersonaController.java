@@ -55,24 +55,24 @@ public class PersonaController {
         personaService.delete(id);
         return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
     }
-    
+    */
     @PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody DtoEducacion dtoeducacion){
-        if(StringUtils.isBlank(dtoeducacion.getNombreE())){
+    public ResponseEntity<?> create(@RequestBody DtoPersona dtopersona){
+        if(StringUtils.isBlank(dtopersona.getNombre())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-        if(sEducacion.existsByNombreE(dtoeducacion.getNombreE())){
-            return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
+        if(personaService.existsByNombre(dtopersona.getNombre())){
+            return new ResponseEntity(new Mensaje("Esta persona ya existe"), HttpStatus.BAD_REQUEST);
         }
         
-        Educacion educacion = new Educacion(
-                dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE()
+        Persona persona = new Persona(
+                dtopersona.getNombre(), dtopersona.getApellido(), dtopersona.getDescripcion(), dtopersona.getImg()
             );
-        sEducacion.save(educacion);
-        return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
+        personaService.save(persona);
+        return new ResponseEntity(new Mensaje("Persona creada"), HttpStatus.OK);
                 
     }
-    */
+    
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoPersona dtopersona){
         if(!personaService.existsById(id)){
