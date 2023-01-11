@@ -25,9 +25,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/personas")
-
-@CrossOrigin(origins = {"http://localhost:4200", " https://apfrontendgag.web.app"})
-
+/*@CrossOrigin(origins = {"http://localhost:4200","https://apfrontendgag.web.app"})*/
+  
 public class PersonaController {
     @Autowired
    ImpPersonaService personaService;
@@ -53,7 +52,7 @@ public class PersonaController {
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
         }
         personaService.delete(id);
-        return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Persona eliminada"), HttpStatus.OK);
     }
     */
     @PostMapping("/create")

@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 public class ImpPersonaService {
  @Autowired IPersonaRepository ipersonaRepository;
 
- //Trae la lista de all experiencias
     
 public List<Persona> list(){
  return ipersonaRepository.findAll();
