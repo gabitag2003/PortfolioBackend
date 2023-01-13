@@ -28,7 +28,7 @@ public class Persona {
     private String   descripcion;
    
 
-   private String img;
+    private String img;
 
     public Persona() {
     }

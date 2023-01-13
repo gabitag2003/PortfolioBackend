@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter  @Setter
+@Getter @Setter
 @Entity
 public class Hys {
     @Id
@@ -21,13 +21,13 @@ public class Hys {
 
     public Hys() {
     }
-    
-    
 
     public Hys(String nombre, int porcentaje) {
         this.nombre = nombre;
         this.porcentaje = porcentaje;
     }
+
+   
 
 
     
